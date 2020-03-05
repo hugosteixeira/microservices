@@ -18,6 +18,10 @@ class ModuleManager:
             f.close()
             f = open(f'{path}/routes.py', 'w')
             f.close()
+            f = open(f'{path}/services.py', 'w')
+            f.close()
+            f = open(f'{path}/models.py', 'w')
+            f.close()
         except Exception as err:
             print('Failed to create the files')
             raise err
@@ -37,6 +41,7 @@ class ModuleManager:
 def module():
     module_manager = ModuleManager()
     module_manager.generateModule(sys.argv[2])
+
 
 manager = {
     "module": module
